@@ -61,11 +61,11 @@ public class Toy implements Toy_Interf {
 
     @Override
     public String toString() {
-//        return "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", count=" + count +
-//                ", weight=" + weight +
-//                ", probability=" + probability;
-        return "ID:" + id + ", name: " + name + ", count: " + count + ", weight: " + weight + ", probability: " + probability + "]";
+        return "id=" + id +
+                ", name='" + name + '\'' +
+                ", count=" + count +
+                ", weight=" + weight +
+                ", probability=" + probability + "\n";
+//        return "ID:" + id + ", name: " + name + ", count: " + count + ", weight: " + weight + ", probability: " + probability;
     }
 }
