@@ -16,11 +16,21 @@ public class JsonFileCreate {
 
     private static final String filePath = "D:\\studies\\JAVA\\test_toy\\test.json";
 
+    /**
+     * метод записи листа в json file "filePath"
+     * @param allToys лист всех игрушек
+     * @throws IOException
+     */
     public void write(List<Toy> allToys) throws IOException {
         File f = new File(filePath);
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(f, allToys);
     }
+
+    /**
+     * читаем из файла json
+     * @return
+     */
     public static ArrayList<Toy> read()  {
         ArrayList<Toy> allToy = null;
         try {

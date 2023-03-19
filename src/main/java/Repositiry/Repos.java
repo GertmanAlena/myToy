@@ -7,12 +7,25 @@ import java.io.IOException;
 import java.util.*;
 
 public class Repos implements Iterable<Toy>, ViewRepos {
+    /**
+     * @allToys лист всех игрушек
+     * @playableToys лист игрушек для игры
+     */
     private List<Toy> allToys = new ArrayList<>();
     private List<Toy> playableToys = new ArrayList<>();
     JsonFileCreate jsonFileCreate = new JsonFileCreate();
     public Integer winId;
+
+    /**
+     * метод создания игрушки
+     * @param name имя игрушки
+     * @param count количество игрушек
+     * @param weight вес игрушки
+     * @param type тип игрушки
+     * @allToys лист всех игрушек
+     */
     @Override
-    public List<Toy> createToy(String name, int count, int weight, String type) throws IOException, org.json.simple.parser.ParseException {
+    public List<Toy> createToy(String name, int count, int weight, String type){
 
         allToys = jsonFileCreate.read();
 
@@ -53,6 +66,13 @@ public class Repos implements Iterable<Toy>, ViewRepos {
         }
         return i;
     }
+
+    /**
+     * метод загрузки из файла
+     * @return
+     * @throws IOException
+     * @throws org.json.simple.parser.ParseException
+     */
     @Override
     public List<Toy> load() throws IOException, org.json.simple.parser.ParseException {
         allToys = jsonFileCreate.read();
@@ -66,6 +86,13 @@ public class Repos implements Iterable<Toy>, ViewRepos {
         }
         return allToys;
     }
+
+    /**
+     * метод удаления игрушки
+     * @param allToys лист всех игрушек
+     * @return @param allToys лист всех игрушек
+     * @throws IOException
+     */
     @Override
     public List<Toy> delToy(List<Toy> allToys) throws IOException {
         String nameToy = " ";
@@ -88,12 +115,25 @@ public class Repos implements Iterable<Toy>, ViewRepos {
         System.out.println("Удалили " + nameToy);
         return allToys;
     }
+
+    /**
+     * метод удаления всех игрушек
+     * @param allToys список всех игрушек
+     * @return allToys пустой лист
+     * @throws IOException
+     */
     @Override
     public List<Toy> clearTheList(List<Toy> allToys) throws IOException {
         allToys.clear();
         System.out.println("Удалили все игрушки!!!...");
         return allToys;
     }
+
+    /**
+     *
+     * @param allToys лист всех игрушек
+     * @param typeNumber тип игрушки для формирования листа
+     */
     public int giveaway(List<Toy> allToys, String typeNumber){
         for(Toy t : allToys){
             if (Objects.equals(t.getType(), typeNumber)){
@@ -105,6 +145,14 @@ public class Repos implements Iterable<Toy>, ViewRepos {
         }
         return playableToys.size();
     }
+
+    /**
+     * метод розыгрыша
+     * @param num берём игрушку из листа @playableToys под этим номером
+     * после определения выигранной игрушки, очищаем лист @playableToys
+     * удаляем игрушку из общего листа
+     * возвращаем лист всех игрушек
+     */
     public List<Toy> play(Integer num){
         String win = playableToys.get(num-1).getName();
         System.out.println("Выйграли " + win);

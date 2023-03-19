@@ -67,11 +67,11 @@ public class ConsoleUI implements ConUi {
         return count;
     }
 
-//    @Override
-//    public String createType(List<Toy> allToys) {
-//        return null;
-//    }
-
+    /**
+     * метод принимает введённое число и в первом случае вносим указанный тип игрушки
+     * во втором случае, по выбранному типу разыгрываем игрушки
+     * @param num тип игрушки, определяемый через switch
+     */
     @Override
     public String createType(Integer num) {
         Scanner scan = new Scanner(System.in);
@@ -105,6 +105,11 @@ public class ConsoleUI implements ConUi {
         return key;
     }
 
+    /**
+     * метод для ввода числа игроком, по которому будет разыгрываться игрушка
+     * @param num
+     * @return
+     */
     @Override
     public Integer RandNam(Integer num) {
         Scanner scan = new Scanner(System.in);

@@ -3,28 +3,39 @@ package Presenter;
 import Repositiry.JsonFileCreate;
 import Repositiry.Repos;
 import UI.ConUi;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-
 public class PresenterToy {
-
+    /**
+     * @countToy переменная для получения количества разыгрываемых игрушек
+     */
     JsonFileCreate jsonFileCreate = new JsonFileCreate();
     private final ConUi cu;
     private final Repos repos;
     public Integer countToy = 0;
-    public PresenterToy(ConUi cu, Repos repos) throws FileNotFoundException {
+
+    public PresenterToy(ConUi cu, Repos repos) {
         this.cu = cu;
         this.repos = repos;
         cu.SetPresenterToy(this);
     }
 
-    public void createToy (String name, int count, int weight, String type) throws IOException, net.minidev.json.parser.ParseException, org.json.simple.parser.ParseException {
+    /**
+     * переходим в метод формирования игрушки и передаём параметры
+     * @param name имя игрушки
+     * @param count количество игрушек
+     * @param weight вес игрушки
+     * @param type тип игрушки
+     */
+    public void createToy (String name, int count, int weight, String type) throws IOException, org.json.simple.parser.ParseException {
         jsonFileCreate.write(repos.createToy(name, count, weight, type));
-
     }
 
+    /**
+     *
+     * @param typeNumber тип игрушки, по которому формируется лист разыгрываемых игрушек
+     * @countToy метод возвращает количество разыгрываемых игрушек
+     */
     public Integer giveaway(String typeNumber) throws IOException, org.json.simple.parser.ParseException {
         countToy = repos.giveaway(repos.load(), typeNumber);
         return countToy;
@@ -42,6 +53,10 @@ public class PresenterToy {
     public void play(Integer num) throws IOException {
         jsonFileCreate.write(repos.play(num));
     }
+
+    /**
+     * удаление игрушки
+     */
     public void delToy(){
         try{
             jsonFileCreate.write(repos.delToy(repos.load()));
