@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c6e22ee-ed36-4b10-831d-afa4a0fe8ce2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/PresenterToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/PresenterToy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repositiry/JsonFileCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repositiry/JsonFileCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repositiry/Repos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repositiry/Repos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Toys/SoftToy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Toys/Toy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Toys/Toy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,22 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/studies/JAVA/test_toy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "1668f18def9a79110144be14db50fdd7"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/studies/JAVA/test_toy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1668f18def9a79110144be14db50fdd7&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\studies\JAVA\test_toy\src\main\java" />
@@ -86,7 +86,8 @@
       <workItem from="1678373892891" duration="14931000" />
       <workItem from="1678465845170" duration="4204000" />
       <workItem from="1678544076026" duration="21940000" />
-      <workItem from="1678609109709" duration="55259000" />
+      <workItem from="1678609109709" duration="55344000" />
+      <workItem from="1679249978251" duration="3690000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;запись чтение&quot;">
       <created>1678294112749</created>
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679247922862</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;сделала большую часть&quot;">
+      <created>1679249331591</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679249331591</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

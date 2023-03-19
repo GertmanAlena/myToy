@@ -9,8 +9,6 @@ public class Toy implements Toy_Interf {
     private double probability;
     String type;
 
-    public Toy() {
-    }
     public Toy(String name, int count, double weight, String type) {
         this.name = name;
         this.count = count;
