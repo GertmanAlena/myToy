@@ -4,7 +4,6 @@ public interface Toy_Interf {
 
     int getId();
 
-
     void setId(int id);
 
     String getName();

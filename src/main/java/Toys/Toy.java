@@ -7,24 +7,33 @@ public class Toy implements Toy_Interf {
     private int count;
     private double weight;
     private double probability;
+    String type;
 
     public Toy() {
     }
-    public Toy(String name, int count, double weight) {
+    public Toy(String name, int count, double weight, String type) {
         this.name = name;
         this.count = count;
         this.weight = weight;
+        this.type = type;
 
     }
-
     @Override
     public int getId() {
         return id;
     }
-    @Override
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String getName() {
         return name;
@@ -61,11 +70,12 @@ public class Toy implements Toy_Interf {
 
     @Override
     public String toString() {
-        return "id=" + id +
-                ", name='" + name + '\'' +
-                ", count=" + count +
-                ", weight=" + weight +
-                ", probability=" + probability + "\n";
+        return "id:" + id + ", " +
+                "name:" + name + ", " +
+                "count:" + count + ", " +
+                "weight:" + weight + ", " +
+                "probability:" + probability + ", " +
+                "type:" + type;
 //        return "ID:" + id + ", name: " + name + ", count: " + count + ", weight: " + weight + ", probability: " + probability;
     }
 }
