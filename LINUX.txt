@@ -1,0 +1,147 @@
+1) Используйте команды операционной системы Linux и создайте две новых директории
+– «Игрушки для школьников» и «Игрушки для дошколят»
+
+drwxrwxr-x  4 my my     4096 Mar 19 21:18 ./
+drwxr-x--- 17 my my     4096 Mar 19 21:12 ../
+-rw-rw-r--  1 my docker  151 Feb  4 22:09 Dockerfile
+drwxrwxr-x  2 my my     4096 Mar 19 21:18 ИгрушкиДляДошколят/
+drwxrwxr-x  2 my my     4096 Mar 19 21:18 ИгрушкиДляШкольников/
+
+2) Создайте в директории «Игрушки для школьников» текстовые файлы
+- «Роботы», «Конструктор», «Настольные игры»
+
+итого 8
+drwxrwxr-x 2 my my 4096 Mar 19 21:35 ./
+drwxrwxr-x 4 my my 4096 Mar 19 21:30 ../
+-rw-rw-r-- 1 my my    0 Mar 19 21:31 Конструктор.txt
+-rw-rw-r-- 1 my my    0 Mar 19 21:33 НастольныеИгры.txt
+-rw-rw-r-- 1 my my    0 Mar 19 21:31 Роботы.txt
+
+
+3) Создайте в директории «Игрушки для дошколят» текстовые файлы «Мягкие игрушки», «Куклы», «Машинки»
+my@my-linux:~/homework$ cd ИгрушкиДляДошколят
+my@my-linux:~/homework/ИгрушкиДляДошколят$ ll
+итого 8
+drwxrwxr-x 2 my my 4096 Mar 19 21:30 ./
+drwxrwxr-x 4 my my 4096 Mar 19 21:30 ../
+my@my-linux:~/homework/ИгрушкиДляДошколят$ touch МягкиеИгрушки.txt
+my@my-linux:~/homework/ИгрушкиДляДошколят$ touch Куклы.txt
+my@my-linux:~/homework/ИгрушкиДляДошколят$ touch Машинки.txt
+my@my-linux:~/homework/ИгрушкиДляДошколят$ дд
+дд: команда не найдена
+my@my-linux:~/homework/ИгрушкиДляДошколят$ ll
+итого 8
+drwxrwxr-x 2 my my 4096 Mar 19 21:36 ./
+drwxrwxr-x 4 my my 4096 Mar 19 21:30 ../
+-rw-rw-r-- 1 my my    0 Mar 19 21:36 Куклы.txt
+-rw-rw-r-- 1 my my    0 Mar 19 21:36 Машинки.txt
+-rw-rw-r-- 1 my my    0 Mar 19 21:36 МягкиеИгрушки.txt
+my@my-linux:~/homework/ИгрушкиДляДошколят$
+
+4) Объединить 2 директории в одну «Имя Игрушки»
+my@my-linux:~/homework$ ll
+
+итого 24
+drwxrwxr-x  5 my my     4096 Mar 19 21:40 ./
+drwxr-x--- 17 my my     4096 Mar 19 21:12 ../
+-rw-rw-r--  1 my docker  151 Feb  4 22:09 Dockerfile
+drwxrwxr-x  2 my my     4096 Mar 19 21:40 Игрушки/
+drwxrwxr-x  2 my my     4096 Mar 19 21:36 ИгрушкиДляДошколят/
+drwxrwxr-x  2 my my     4096 Mar 19 21:35 ИгрушкиДляШкольников/
+my@my-linux:~/homework$ mv ИгрушкиДляДошколят Игрушки
+my@my-linux:~/homework$ mv ИгрушкиДляШкольников Игрушки
+my@my-linux:~/homework$ ll
+итого 16
+drwxrwxr-x  3 my my     4096 Mar 19 21:41 ./
+drwxr-x--- 17 my my     4096 Mar 19 21:12 ../
+-rw-rw-r--  1 my docker  151 Feb  4 22:09 Dockerfile
+drwxrwxr-x  4 my my     4096 Mar 19 21:41 Игрушки/
+my@my-linux:~/homework$ cd Игрушки
+my@my-linux:~/homework/Игрушки$ ll
+итого 16
+drwxrwxr-x 4 my my 4096 Mar 19 21:41 ./
+drwxrwxr-x 3 my my 4096 Mar 19 21:41 ../
+drwxrwxr-x 2 my my 4096 Mar 19 21:36 ИгрушкиДляДошколят/
+drwxrwxr-x 2 my my 4096 Mar 19 21:35 ИгрушкиДляШкольников/
+my@my-linux:~/homework/Игрушки$
+
+5) Переименовать директорию «Имя Игрушки» в «Игрушки»
+my@my-linux:~/homework$ mv Игрушки ИгрушкиMy
+my@my-linux:~/homework$ ll
+итого 16
+drwxrwxr-x  3 my my     4096 Mar 19 21:43 ./
+drwxr-x--- 17 my my     4096 Mar 19 21:12 ../
+-rw-rw-r--  1 my docker  151 Feb  4 22:09 Dockerfile
+drwxrwxr-x  4 my my     4096 Mar 19 21:41 ИгрушкиMy/
+my@my-linux:~/homework$
+
+6)   Просмотреть содержимое каталога «Игрушки».
+
+my@my-linux:~/homework$ ls -al
+итого 16
+drwxrwxr-x  3 my my     4096 Mar 19 21:43 .
+drwxr-x--- 17 my my     4096 Mar 19 21:12 ..
+-rw-rw-r--  1 my docker  151 Feb  4 22:09 Dockerfile
+drwxrwxr-x  4 my my     4096 Mar 19 21:41 ИгрушкиMy
+my@my-linux:~/homework$ ls -al ИгрушкиMy
+итого 16
+drwxrwxr-x 4 my my 4096 Mar 19 21:41 .
+drwxrwxr-x 3 my my 4096 Mar 19 21:43 ..
+drwxrwxr-x 2 my my 4096 Mar 19 21:36 ИгрушкиДляДошколят
+drwxrwxr-x 2 my my 4096 Mar 19 21:35 ИгрушкиДляШкольников
+
+7)   Установить и удалить snap-пакет. (Любой, какой хотите)
+
+my@my-linux:~$ sudo snap install opera
+Automatically connect eligible plugs and slots of snap "opera"                                      Automatically connect eligible plugs and slots of snap "opera"                                      Autopera 96.0.4693.80 от Opera (opera-software✓) установлен
+my@my-linux:~$ snap list
+Название                   Версия                      Правка  Канал            Издатель         Примечание
+bare                       1.0                         5       latest/stable    canonical✓       base
+chromium-ffmpeg            0.1                         30      latest/stable    canonical✓       -
+core                       16-2.58.2                   14784   latest/stable    canonical✓       core
+core18                     20230308                    2714    latest/stable    canonical✓       base
+core20                     20230207                    1828    latest/stable    canonical✓       base
+firefox                    111.0-2                     2432    latest/stable/…  mozilla✓         -
+gnome-3-28-1804            3.28.0-19-g98f9e67.98f9e67  161     latest/stable    canonical✓       -
+gnome-3-38-2004            0+git.6f39565               119     latest/stable/…  canonical✓       -
+gtk-common-themes          0.1-81-g442e511             1535    latest/stable/…  canonical✓       -
+opera                      96.0.4693.80                223     latest/stable    opera-software✓  -
+snap-store                 41.3-66-gfe1e325            638     latest/stable/…  canonical✓       -
+snapd                      2.58.2                      18357   latest/stable    canonical✓       snapd
+snapd-desktop-integration  0.1                         49      latest/stable/…  canonical✓       -
+tree                       1.8.0+pkg-3fd6              18      latest/stable    brlin            -
+my@my-linux:~$ sudo snap remove opera
+opera удалено
+my@my-linux:~$ snap list
+Название                   Версия                      Правка  Канал            Издатель    Примечание
+bare                       1.0                         5       latest/stable    canonical✓  base
+chromium-ffmpeg            0.1                         30      latest/stable    canonical✓  -
+core                       16-2.58.2                   14784   latest/stable    canonical✓  core
+core18                     20230308                    2714    latest/stable    canonical✓  base
+core20                     20230207                    1828    latest/stable    canonical✓  base
+firefox                    111.0-2                     2432    latest/stable/…  mozilla✓    -
+gnome-3-28-1804            3.28.0-19-g98f9e67.98f9e67  161     latest/stable    canonical✓  -
+gnome-3-38-2004            0+git.6f39565               119     latest/stable/…  canonical✓  -
+gtk-common-themes          0.1-81-g442e511             1535    latest/stable/…  canonical✓  -
+snap-store                 41.3-66-gfe1e325            638     latest/stable/…  canonical✓  -
+snapd                      2.58.2                      18357   latest/stable    canonical✓  snapd
+snapd-desktop-integration  0.1                         49      latest/stable/…  canonical✓  -
+tree                       1.8.0+pkg-3fd6              18      latest/stable    brlin       -
+my@my-linux:~$
+
+8) Добавить произвольную задачу для выполнения каждые 3 минуты
+(Например, запись в текстовый файл чего-то или копирование из каталога А в каталог Б).
+
+my@my-linux:~/homework/ИгрушкиMy$ crontab -l
+
+*/3 * * * * cp ИгрушкиДляШкольников.txt ИгрушкиДляДошколят.txt
+my@my-linux:~/homework/ИгрушкиMy$ ll
+итого 16
+drwxrwxr-x 4 my my 4096 Mar 19 21:41 ./
+drwxrwxr-x 3 my my 4096 Mar 19 21:43 ../
+drwxrwxr-x 2 my my 4096 Mar 19 21:36 ИгрушкиДляДошколят/
+drwxrwxr-x 2 my my 4096 Mar 19 21:35 ИгрушкиДляШкольников/
+my@my-linux:~/homework/ИгрушкиMy$
+
+
+
